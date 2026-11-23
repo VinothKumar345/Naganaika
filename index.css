@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    color: #1e293b;
+    background-color: #FFFDF9;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom Cosmic Glow & Gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #A31936 0%, #D97706 50%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.crimson-gradient-text {
+  background: linear-gradient(135deg, #72122E 0%, #8B1538 50%, #C52243 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vedic-gold-glow {
+  box-shadow: 0 0 25px rgba(217, 119, 6, 0.25);
+}
+
+.vedic-crimson-glow {
+  box-shadow: 0 0 25px rgba(139, 21, 56, 0.25);
+}
+
+/* Sacred Geometric Patterns */
+.bg-sacred-pattern {
+  background-color: #FFFDF9;
+  background-image: radial-gradient(#d97706 0.75px, transparent 0.75px), radial-gradient(#8b1538 0.75px, #FFFDF9 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-opacity: 0.04;
+}
+
+.bg-mandala-dark {
+  background: radial-gradient(circle at center, #1E1735 0%, #0C0A14 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF5EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D97706;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B1538;
+}
+
+/* Pulse ring animation */
+@keyframes pulseRing {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.08); opacity: 0.4; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-pulse-ring {
+  animation: pulseRing 4s ease-in-out infinite;
+}
